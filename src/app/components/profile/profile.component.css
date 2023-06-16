@@ -1,0 +1,79 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+.profile-card {
+  width: 100%;
+  padding: 20px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.profile-avatar {
+  width: 50px;
+  height: 50px;
+}
+
+.profile-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.detail-item {
+  margin-bottom: 5px;
+}
+
+.profile-description {
+  margin-bottom: 10px;
+}
+
+.profile-settings {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.settings-button {
+  justify-self: start;
+}
+.profile-settings label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.profile-settings input,
+.profile-settings textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.logo-preview {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.settings-button {
+  margin-top: 10px;
+}

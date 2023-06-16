@@ -1,0 +1,28 @@
+<div class="container" *ngIf="!matriz">
+  <h2>Pesquise modelos</h2>
+
+  <div class="button-container">
+    <button mat-raised-button color="primary" class="custom-button">Criar novo canvas</button>
+    <mat-form-field appearance="fill" class="custom-input">
+      <mat-label>Pesquise</mat-label>
+      <input matInput type="text" name="surch" id="surch">
+    </mat-form-field>
+  </div>
+
+  <h2>Canvas recentes</h2>
+  <div class="dashboard" >
+    <div class="quadros">
+      <div *ngFor="let canva of canvas1" class="quadro">
+        <app-canvas-small [canvasselect]="canva" (click)="changePage('canva',canva)"></app-canvas-small>
+      </div>
+    </div>
+  </div>
+
+  <h2>Título</h2>
+  <div class="quadros-pequenos">
+    <app-quadro></app-quadro>
+    <app-quadro></app-quadro>
+    <app-quadro></app-quadro>
+
+  </div>
+</div>

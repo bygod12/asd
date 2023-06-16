@@ -1,0 +1,100 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-block {
+  width: 300px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.auth-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-form-field .mat-input-element {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-size: 16px;
+}
+
+mat-form-field .mat-input-element:focus {
+  outline: none;
+  border-color: #0069D9;
+}
+
+mat-form-field .mat-form-field-underline {
+  display: none;
+}
+
+.login-button {
+  width: 100%;
+}
+
+.or-divider {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+}
+
+.or-divider-text {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.google-login-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google-login-button i {
+  margin-right: 8px;
+}
+
+.forgot-password {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.password-link {
+  color: blue;
+  text-decoration: none;
+}
+
+.password-link:hover {
+  text-decoration: underline;
+}
+
+.redirect-to-register {
+  text-align: center;
+  font-size: 14px;
+}
+
+.redirect {
+  color: blue;
+  text-decoration: none;
+}
+
+.redirect:hover {
+  text-decoration: underline;
+}

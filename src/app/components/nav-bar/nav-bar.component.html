@@ -1,0 +1,40 @@
+<div *ngIf="!canvass">
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport
+                 [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+                 [mode]="(isHandset$ | async) ? 'over' : 'side'"
+                 [opened]="(isHandset$ | async) === false">
+      <mat-toolbar>Menu</mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item (click)="changePage('dashboard')">dashboard</a>
+        <a mat-list-item (click)="changePage('profile')">Profile</a>
+        <a mat-list-item routerLink="/sign-in">logout</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>{{ title }}</span>
+      </mat-toolbar>
+      <app-dashboard *ngIf="dash"
+                     [table]="table"
+                     [canvass]="canvass"
+                     [dash]="dash"
+                     [profile]="profile"
+                     [title]="title"
+                     [canvasselect]="canvasselect"
+                     (outputEmitido)="canvaemit($event)"></app-dashboard>
+      <app-table *ngIf="table"></app-table>
+      <app-profile *ngIf="profile"></app-profile>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+<app-canvas *ngIf="canvass" [canvasselect]="canvasselect"></app-canvas>

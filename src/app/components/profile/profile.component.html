@@ -1,0 +1,60 @@
+<div class="grid-container">
+  <mat-card class="profile-card">
+    <div class="profile-header">
+      <img class="profile-avatar" src="{{userpreview.logo}}" alt="Foto de Perfil">
+      <h1 class="profile-name">{{userpreview.name}}</h1>
+      <p class="profile-title">{{userpreview.corMarca}}</p>
+    </div>
+  </mat-card>
+
+  <mat-card class="profile-card">
+    <h2 class="section-title">Informações Pessoais</h2>
+    <div class="profile-details">
+      <p class="detail-item"><strong>Email:</strong> {{userpreview.email}}</p>
+      <p class="detail-item"><strong>Telefone:</strong> {{userpreview.telefone}}</p>
+      <p class="detail-item"><strong>Endereço:</strong> {{userpreview.endereco}}</p>
+    </div>
+  </mat-card>
+
+  <mat-card class="profile-card">
+    <h2 class="section-title">Sobre</h2>
+    <p class="profile-description">{{userpreview.description}}</p>
+  </mat-card>
+
+  <mat-card class="profile-card">
+    <h2 class="section-title">Configurações</h2>
+    <div class="profile-settings">
+      <div>
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" placeholder="Nome" [(ngModel)]="name">
+      </div>
+      <div>
+        <label for="descricao">Descrição</label>
+        <textarea name="descricao" id="descricao" placeholder="Descrição" [(ngModel)]="description"></textarea>
+      </div>
+      <div>
+        <label for="logo">Logo</label>
+        <input type="file" accept="image/*" name="logo" id="logo" (change)="handleLogoChange($event)">
+        <img class="logo-preview" [src]="logoPreview" *ngIf="logoPreview">
+      </div>
+      <div>
+        <label for="telefone">Telefone</label>
+        <input type="text" name="telefone" id="telefone" placeholder="Telefone" [(ngModel)]="telefone">
+      </div>
+      <div>
+        <label for="endereco">Endereço</label>
+        <input type="text" name="endereco" id="endereco" placeholder="Endereço" [(ngModel)]="endereco">
+      </div>
+      <div>
+        <label for="site">Site</label>
+        <input type="text" name="site" id="site" placeholder="Site" [(ngModel)]="site">
+      </div>
+      <div>
+        <label for="corMarca">Cor da Marca</label>
+        <input type="color" name="corMarca" id="corMarca" [(ngModel)]="corMarca">
+      </div>
+
+      <button mat-button class="settings-button" (click)="updateUser()">Editar</button>
+    </div>
+  </mat-card>
+</div>

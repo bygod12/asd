@@ -1,0 +1,32 @@
+<div class="login-container">
+  <div class="auth-block">
+    <h3 class="auth-title">Cadastre-se</h3>
+    <div class="form-group">
+      <mat-form-field>
+        <input matInput type="email" placeholder="Endereço de Email" #userEmail required>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field>
+        <input matInput type="password" placeholder="Senha" #userPwd required>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <button mat-raised-button color="primary" class="signup-button" (click)="authService.SignUp(userEmail.value, userPwd.value)">
+        Cadastrar
+      </button>
+    </div>
+    <div class="or-divider">
+      <span class="or-divider-text">Ou</span>
+    </div>
+    <div class="form-group">
+      <button mat-raised-button color="warn" class="google-login-button" (click)="authService.GoogleAuth()">
+        <i class="fab fa-google-plus-g"></i>
+        Continuar com o Google
+      </button>
+    </div>
+    <div class="redirect-to-login">
+      <span>Já possui uma conta?<span class="redirect" routerLink="/sign-in">Login</span></span>
+    </div>
+  </div>
+</div>

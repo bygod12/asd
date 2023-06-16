@@ -1,0 +1,114 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quadros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.custom-button {
+  flex-grow: 1;
+  margin-right: 10px;
+  padding: 10px;
+  width: 180px;
+  height: 60px;
+}
+
+.custom-input {
+  flex-grow: 2;
+  margin: 0;
+}
+
+mat-form-field {
+  width: 100%;
+  border-radius: 20px;
+}
+
+mat-form-field .mat-form-field-wrapper {
+  border-radius: 20px;
+}
+
+mat-form-field .mat-input-element {
+  border-radius: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.quadros-pequenos {
+  display: flex;
+}
+
+.quadro {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.quadro:hover {
+  transform: scale(1.05);
+}
+
+.quadro .imagem {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quadro .imagem img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.quadro .titulo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: #ffffff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}

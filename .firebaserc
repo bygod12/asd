@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "marketing-8dd8f": {
+      "hosting": {
+        "marketing_canvas": [
+          "marketing-8dd8f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "marketing-8dd8f"
+  }
+}

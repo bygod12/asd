@@ -1,0 +1,84 @@
+<div class="container1">
+  <div class="d-flex align-content-center">
+    <div class="panes">
+
+      <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title>Cor do tema</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <input type="color" >
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="card" *ngIf="this.canvasselect.background == 'marca'">
+        <mat-card-header>
+          <mat-card-title>Background</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          Mude a cor
+          <input class="image-button" type="color" (change)="onColorChange($event)">
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title>Imagens serem mudadas</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-button-toggle-group name="photoOptions">
+            <div *ngFor="let image of imageChange">
+              <button class="button" mat-raised-button (click)="fileInput.click()">
+                {{image.text}}
+              </button>
+              <input type="file" accept="image/*" (change)="substituiImagem($event, image)" style="display: none" #fileInput>
+            </div>
+          </mat-button-toggle-group>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title>Textos a serem mudados</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-button-toggle-group name="textOptions">
+            <div *ngFor="let text of textChange">
+
+            <button class="button" mat-raised-button (click)="changeText(text)">
+              {{text.text}}
+              </button>
+            </div>
+
+          </mat-button-toggle-group>
+        </mat-card-content>
+      </mat-card>
+
+    </div>
+
+    <div>
+      <div class="canvas-container">
+        <canvas id="canvas" class="canvas" width="600" height="800"></canvas>
+      </div>
+      <div class="list_buttons">
+        <button mat-raised-button color="primary" >
+          <mat-icon>cloud_download</mat-icon>
+          Download
+        </button>
+
+        <button mat-raised-button color="primary">
+          <mat-icon>facebook</mat-icon>
+          Compartilhar no Facebook
+        </button>
+
+        <button mat-raised-button color="primary" (click)="defineScale(100,200, false)">
+          <mat-icon><img
+            src="https://w7.pngwing.com/pngs/340/745/png-transparent-computer-icons-white-instagram-icon-text-logo-area.png">
+          </mat-icon>
+          Compartilhar no Instagram
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>

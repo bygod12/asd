@@ -1,0 +1,10 @@
+<h2>Alterar Texto</h2>
+
+<div>
+  <input [(ngModel)]="newText" placeholder="Digite o novo texto">
+</div>
+
+<div>
+  <button mat-raised-button color="primary" (click)="save()">Salvar</button>
+  <button mat-raised-button (click)="dialogRef.close()">Cancelar</button>
+</div>

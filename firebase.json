@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "marketing_canvas",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
